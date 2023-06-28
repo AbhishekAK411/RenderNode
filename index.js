@@ -18,8 +18,8 @@ app.use(express.json());
 app.post("/register", register);
 app.use("/abhishek/static", router);
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect("mongodb+srv://abhishek:Glorious%40Mongo41@atlascluster.htagarr.mongodb.net/staticRenderDB?retryWrites=true&w=majority")
 .then(() => console.log("DB Connection Established."))
 .catch((err) => console.log("DB Error",err));
 
-app.listen(process.env.PORT);
+app.listen(8000);
