@@ -18,8 +18,8 @@ app.use(express.json());
 app.post("/register", register);
 app.use("/abhishek/static", router);
 
-mongoose.connect(process.env.mongodb_url)
+mongoose.connect(process.env.MONGODB_URL)
 .then(() => console.log("DB Connection Established."))
 .catch((err) => console.log("DB Error",err));
 
-app.listen(process.env.port);
+app.listen(process.env.PORT);
