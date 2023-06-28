@@ -20,6 +20,6 @@ app.use("/abhishek/static", router);
 
 mongoose.connect(process.env.mongodb_url)
 .then(() => console.log("DB Connection Established."))
-.catch((err) => console.log("DB Error"));
+.catch((err) => console.log("DB Error",err));
 
 app.listen(process.env.port);
